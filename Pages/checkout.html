@@ -41,8 +41,8 @@
     </header>
 
     <main>
-        <div class="container">
-            <h1>Checkout</h1>
+        <div class="checkout-container"> <!--container-->
+            <!-- <h1>Checkout</h1>
             <div class="cart-items">
                 <div class="cart-item">
                     <p>Item 1</p>
@@ -66,7 +66,7 @@
             <div class="cart-summary">
                 <p id="totalPrice">Total: $45.00</p>
                 <button onclick="window.location.href='payment.html'">Proceed to Payment</button>
-            </div>
+            </div> -->
         </div>
     </main>
     <footer>
@@ -79,17 +79,43 @@
     </footer>
 
     <script>
-        function updateTotal() {
-            const price1 = 20.00;
-            const price2 = 15.00;
-            const price3 = 10.00;
+        function updateTotal() 
+        {
+            function updateCheckoutPage() 
+            {
+            // Get the cart items from local storage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            // Update the checkout page with the cart items
+            const checkoutContainer = document.getElementById('checkout-container');
+            checkoutContainer.innerHTML = ''; // Clear existing content
+            
+            cart.forEach(item => 
+            {
+                const itemElement = document.createElement('div');
+                itemElement.textContent = `Item: ${item.name}, Quantity: ${item.quantity}`;
+                checkoutContainer.appendChild(itemElement);
+            });
+            }
+            
+            // Initial update when the page loads
+            updateCheckoutPage();
+            // Optional: Listen for cart updates (if you use a global method or event)
+            window.cartUpdated = updateCheckoutPage;
+            
+            // Optionally, you can also set up a periodic check if needed
+            setInterval(updateCheckoutPage, 5000); // Check every 5 seconds
 
-            const quantity1 = document.getElementById('quantity1').value;
-            const quantity2 = document.getElementById('quantity2').value;
-            const quantity3 = document.getElementById('quantity3').value;
 
-            const total = (price1 * quantity1) + (price2 * quantity2) + (price3 * quantity3);
-            document.getElementById('totalPrice').innerText = `Total: $${total.toFixed(2)}`;
+            // const price1 = 20.00;
+            // const price2 = 15.00;
+            // const price3 = 10.00;
+
+            // const quantity1 = document.getElementById('quantity1').value;
+            // const quantity2 = document.getElementById('quantity2').value;
+            // const quantity3 = document.getElementById('quantity3').value;
+
+            // const total = (price1 * quantity1) + (price2 * quantity2) + (price3 * quantity3);
+            // document.getElementById('totalPrice').innerText = `Total: $${total.toFixed(2)}`;
         }
     </script>
 </body>
