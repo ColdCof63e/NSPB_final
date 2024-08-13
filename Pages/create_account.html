@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="icon" type="image/x-icon" href="/Robe (10)/Robe (8)/Robe/images/ROBE_transparent.colored.png">
+    <link rel="stylesheet" href="../style/create_Account.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+        <a href="Home.html" style="text-decoration: none; color: white;">
+            <p>ROBE<span><img src="../images/ROBE_transparent.colored.png" alt="ROBE"></span></p>
+        </a>
+    </div>
+
+    </header>
+
+    <main>
+        <div class="container">
+            <form action="/submit_account" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required>
+                </div>
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <ul>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- <script src="script.js"></script> -->
+     <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting
+
+        // Display the account created message
+        alert('Account Created Successfully!');
+
+        // Redirect to the Home page after the alert
+        window.location.href = 'Home.html'; // Change 'Home.html' to the correct path of your Home page
+    });
+});
+
+
+     </script>
+</body>
+
+</html>

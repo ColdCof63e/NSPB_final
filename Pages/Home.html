@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="../style/Home.css">
+    <link rel="icon" type="image/x-icon" href="../images/ROBE_transparent.colored.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="Home.html" style="text-decoration: none; color: white;">
+                <p>ROBE<span><img src="../images/ROBE_transparent.colored.png" alt="ROBE"></span></p>
+            </a>
+        </div>
+        <nav id="categories">
+            <ul>
+                <li><a href="#shirts" onclick="smoothScroll(event)">Shirts</a></li>
+                <li><a href="#jeans" onclick="smoothScroll(event)">Jeans</a></li>
+                <li><a href="#footwear" onclick="smoothScroll(event)">Footwear</a></li>
+                <li><a href="#accessories" onclick="smoothScroll(event)">Accessories</a></li>
+            </ul>
+        </nav>
+        
+        <div class="nav-links">
+            <!-- Account Creation Icon -->
+            <a href="./create_account.html"><svg xmlns="http://www.w3.org/2000/svg" height="40px"
+                    viewBox="0 -960 960 960" width="40px" fill="#e8eaed">
+                    <path
+                        d="M320-360h320v-19.81q0-40.52-45-66.02-45-25.5-115-25.5t-115 25.5q-45 25.5-45 66.02V-360Zm159.95-169.33q31.05 0 53.22-22.12 22.16-22.11 22.16-53.16 0-31.06-22.11-53.22Q511.11-680 480.05-680q-31.05 0-53.22 22.11-22.16 22.12-22.16 53.17t22.11 53.22q22.11 22.17 53.17 22.17ZM326.67-120v-80h-180q-27 0-46.84-19.83Q80-239.67 80-266.67v-506.66q0-27 19.83-46.84Q119.67-840 146.67-840h666.66q27 0 46.84 19.83Q880-800.33 880-773.33v506.66q0 27-19.83 46.84Q840.33-200 813.33-200h-180v80H326.67Zm-180-146.67h666.66v-506.66H146.67v506.66Zm0 0v-506.66 506.66Z" />
+                </svg></a>
+            
+            <!-- Cart Icon -->
+            <a href="./checkout.html"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960"
+                    width="40px" fill="#e8eaed">
+                    <path
+                        d="M286.79-81Q257-81 236-102.21t-21-51Q215-183 236.21-204t51-21Q317-225 338-203.79t21 51Q359-123 337.79-102t-51 21Zm400 0Q657-81 636-102.21t-21-51Q615-183 636.21-204t51-21Q717-225 738-203.79t21 51Q759-123 737.79-102t-51 21ZM235-741l110 228h288l125-228H235Zm-30-60h589.07q22.97 0 34.95 21 11.98 21-.02 42L694-495q-11 19-28.56 30.5T627-453H324l-56 104h491v60H277q-42 0-60.5-28t.5-63l64-118-152-322H51v-60h117l37 79Zm140 288h288-288Z" />
+                </svg></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="background-image">
+            <div class="description">
+                <h1>Welcome to ROBE Clothing</h1>
+                <p>Your one-stop shop for the latest and greatest in fashion.</p>
+            </div>
+        </div>
+
+        <div>
+            <h1 style="text-align: center; padding-top:20px ;">Find Your Fashion</h1>
+        </div>
+
+        <section id="shirts">
+            <h2>Shirts</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="../images/Items/Shirts/shirt1.jpg" alt="Casual Shirt 1">
+                    <h3>Black T-Shirt 1</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal('Casual T-Shirt 1', 'A stylish and comfortable casual shirt perfect for everyday wear. Made with high-quality cotton for a soft feel and durable wear. Available in various sizes.');">View
+                        Details</button>
+                    <button
+                        onclick="addToCart({name: 'Casual Shoe', description: 'Blue Latest Women Shoe', price: '$49.99', image: '../images/Items/Footwear/shoe3dewsc.jpg'})">Add
+                        to Cart</button>
+                </div>
+
+                <div class="product">
+                    <img src="../images/Items/Shirts/shirt2.jpg" alt="Shirt_2">
+                    <h3>Casual shirt</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal({name: 'Casual Shirt', description: 'Comfortable casual shirt', price: '$49.99', image: '../images/Items/Shirts/shirt2desc.jpg'})">View
+                        Details
+                    </button>
+                    <button
+                        onclick="addToCart({name: 'Casual Shirt', description: 'Comfortable casual shirt', price: '$49.99', image: '../images/Items/Shirts/shirt2desc.jpg'})">Add
+                        to Cart
+                    </button>
+                </div>
+
+                <div class="product">
+                    <img src="../images/Items/Shirts/shirt3.jpg" alt="Shirt_3">
+                    <h3>Casual Shirt</h3>
+                    <p>$49.99</p>
+                    <button onclick="openModal({name: 'Casual Shirt', description: 'Comfortable casual shirt', price: '$49.99', image: '../images/Items/Shirts/shirt3desc.jpg'})">View
+                    Details
+                    </button>
+                    <button onclick="addToCart({name: 'Casual Shirt', description: 'Comfortable casual shirt', price: '$49.99', image: '../images/Items/Shirts/shirt3desc.jpg'})">Add
+                    to Cart
+                </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="jeans">
+            <h2>Jeans</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="../images/Items/Jeans/jeans1.jpg" alt="Blue Jeans 1">
+                    <h3>Blue Jeans 1</h3>
+                    <p>$59.99</p>
+                    <button
+                        onclick="openModal('Blue Jeans 1', 'Classic blue jeans with a timeless design. Made from durable denim, these jeans offer both style and comfort. Perfect for any casual outfit.');">View
+                        Details</button>
+                        <button onclick="addToCart({name: 'Casual Shoe', description: 'Blue Latest Women Shoe', price: '$49.99', image: '../images/Items/Footwear/shoe3dewsc.jpg'})">Add
+                            to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="../images/Items/Jeans/jeans2.jpg" alt="Black Jeans 1">
+                    <h3>Black Jeans 1</h3>
+                    <p>$64.99</p>
+                    <button
+                        onclick="openModal('Black Jeans 1', 'Sleek black jeans with a modern fit. Ideal for a night out or a day at the office, these jeans combine style with practicality.');">View
+                        Details</button>
+                        <button onclick="addToCart({name: 'Casual Shoe', description: 'Blue Latest Women Shoe', price: '$49.99', image: '../images/Items/Footwear/shoe3dewsc.jpg'})">Add
+                            to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="../images/Items/Jeans/jeans3.jpg" alt="Jeans_3">
+                    <h3>Blue Torn Jeans</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal({name: ' jeans', description: 'Ripped Blue Stylish Jeans', price: '$49.99', image: '../images/Items/Jeans/jeans3desc.jpg'})">View
+                        Details</button>
+                    <button
+                        onclick="addToCart({name: ' jeans', description: 'Ripped Blue Stylish Jeans', price: '$49.99', image: '../images/Items/Jeans/jeans3desc.jpg'})">Add
+                        to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="footwear">
+            <h2>Footwear</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="../images/Items/Footwear/shoe1.jpg" alt="Footwear 1">
+                    <h3> Cream Casual Shoe</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal({name: 'Casual Shoe', description: 'Comfortable casual shoe', price: '$49.99', image: '../images/Items/Footwear/shoe1desc.jpg'})">View
+                        Details</button>
+                    <button
+                        onclick="addToCart({name: 'Casual Shoe', description: 'Comfortable casual shoe', price: '$49.99', image: '../images/Items/Footwear/shoe1desc.jpg'})">Add
+                        to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="../images/Items/Footwear/shoe2.jpg" alt="Footwear 1">
+                    <h3> White Casual Shoe</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal({name: 'Casual Shoe', description: 'White Latest Women Shoe', price: '$49.99', image: '../images/Items/Footwear/shoe2desc.jpg'})">View
+                        Details</button>
+                    <button
+                        onclick="addToCart({name: 'Casual Shoe', description: 'White Latest Women Shoe', price: '$49.99', image: '../images/Items/Footwear/shoe2desc.jpg'})">Add
+                        to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="../images/Items/Footwear/shoe3.jpg" alt="Footwear 1">
+                    <h3>Casual Blue Shoe</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal({name: 'Casual Shoe', description: 'Blue Latest Women Shoe', price: '$49.99', image: '../images/Items/Footwear/shoe3dewsc.jpg'})">View
+                        Details</button>
+                    <button
+                        onclick="addToCart({name: 'Casual Shoe', description: 'Blue Latest Women Shoe', price: '$49.99', image: '../images/Items/Footwear/shoe3dewsc.jpg'})">Add
+                        to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="accessories">
+            <h2>Accessories</h2>
+            <div class="products">
+                <div class="product">
+                    <img src="../images/Items/Accessories/acc1.jpg" alt="Accessories_1">
+                    <h3>Silver Chain</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal({name: 'Neck Silver Chain', description: 'Stylish and latest nect Chain of Mens', price: '$49.99', image: '../images/Items/Accessories/acc1desc.jpg'})">View
+                        Details</button>
+                    <button
+                        onclick="addToCart({name: 'Neck Silver Chain', description: 'Stylish and latest nect Chain of Mens', price: '$49.99', image: '../images/Items/Accessories/acc1desc.jpg'})">Add
+                        to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="../images/Items/Accessories/acc2.jpg" alt="Accessories_2">
+                    <h3>Silever Ring</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal({name: 'Silver Ring', description: 'Silver Women Diamond Ring', price: '$49.99', image: '../images/Items/Accessories/acc2desc.jpg'})">View
+                        Details</button>
+                    <button
+                        onclick="addToCart({name: 'Silver Ring', description: 'Silver Women Diamond Ring', price: '$49.99', image: '../images/Items/Accessories/acc2desc.jpg'})">Add
+                        to Cart</button>
+                </div>
+                <div class="product">
+                    <img src="../images/Items/Accessories/acc3.jpg" alt="Accessories_3">
+                    <h3> Platinum Ring</h3>
+                    <p>$49.99</p>
+                    <button
+                        onclick="openModal({name: 'Platinum Ring', description: 'Platinum Ring with Smalls stones in it', price: '$49.99', image: '../images/Items/Accessories/acc2desc.jpg'})">View
+                        Details</button>
+                    <button
+                        onclick="addToCart({name: 'Platinum Ring', description: 'Platinum Ring with Smalls stones in it', price: '$49.99', image: '../images/Items/Accessories/acc2desc.jpg'})">Add
+                        to Cart</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2 id="modal-product-name">Product Name</h2>
+            <div id="modal-slider" class="slider">
+                <img id="modal-image" src="" alt="Product Image">
+            </div>
+            <p id="modal-product-description">Product Description</p>
+            <p id="modal-product-price">$0.00</p>
+            <button id="add-to-cart-btn">Add to Cart</button>
+        </div>
+    </div>
+
+
+    <script>
+        // Modal Functionality
+        const modal = document.getElementById("product-modal");
+        const closeBtn = document.getElementsByClassName("close-btn")[0];
+        let cartCount = 0; // Initialize cart counter
+
+        function openModal(product) {
+            document.getElementById("modal-product-name").textContent = product.name;
+            document.getElementById("modal-product-description").textContent = product.description;
+            document.getElementById("modal-product-price").textContent = product.price;
+            document.getElementById("modal-image").src = product.image;
+            modal.style.display = "block";
+
+            // Handle "Add to Cart" button click
+            const addToCartBtn = document.getElementById("add-to-cart-btn");
+            addToCartBtn.onclick = () => addToCart(product);
+        }
+
+        function addToCart(product) {
+            cartCount++;
+            alert(`Added ${product.name} to cart. Total items in cart: ${cartCount}`);
+            // You can add additional code to handle cart updates here
+        }
+
+        closeBtn.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
